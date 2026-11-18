@@ -1,5 +1,5 @@
 # DEBUG ONLY (eng builds)
-service m30s-bootlog /vendor/bin/m30s-bootlog.sh
+service m30s-bootlog /system_ext/bin/m30s-bootlog.sh
     user root
     group root log system
     seclabel u:r:su:s0

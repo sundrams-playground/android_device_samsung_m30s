@@ -2,12 +2,12 @@
 sh_binary {
     name: "m30s-bootlog.sh",
     src: "m30s-bootlog.sh",
-    vendor: true,
+    system_ext_specific: true,
 }
 
 prebuilt_etc {
     name: "m30s-bootlog.rc",
     src: "m30s-bootlog.rc",
     sub_dir: "init",
-    vendor: true,
+    system_ext_specific: true,
 }
