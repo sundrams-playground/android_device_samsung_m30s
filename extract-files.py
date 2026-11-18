@@ -28,6 +28,7 @@ blob_fixups: blob_fixups_user_type = {
         'vendor/lib64/sensors.grip.so',
         'vendor/lib64/sensors.inputvirtual.so',
         'vendor/lib64/sensors.sensorhub.so',
+        'vendor/lib64/hw/sensors.sensorhub.so',
     ): blob_fixup()
         .remove_needed('libhidltransport.so')
         .add_needed('libutils-v32.so')
