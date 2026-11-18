@@ -22,7 +22,7 @@ include device/samsung/universal9611-common/BoardConfigPieLaunched.mk
 -include vendor/samsung/m30s/BoardConfigVendor.mk
 
 # OTA Asserts
-TARGET_OTA_ASSERT_DEVICE := m21,m21dd,m21nsxx
+TARGET_OTA_ASSERT_DEVICE := m30s,m30snsxx
 
 ## Partitions Sizes
 BOARD_BOOTIMAGE_PARTITION_SIZE := 57671680
@@ -37,7 +37,7 @@ BOARD_SUPER_PARTITION_SIZE := 5033164800
 BOARD_SAMSUNG_DYNAMIC_PARTITIONS_SIZE := 5028970496
 
 ## Camera
-$(call soong_config_set,samsungCameraVars,extra_ids,4,20,23,50,52)
+$(call soong_config_set,samsungCameraVars,extra_ids,20,23,50,52)
 
 ## Prop
 TARGET_VENDOR_PROP += $(DEVICE_PATH)/vendor.prop

@@ -14,9 +14,6 @@
 # limitations under the License.
 #
 
-# NFC
-TARGET_USES_SLSI_NFC := true
-
 # Inherit device configuration
 $(call inherit-product, device/samsung/m30s/device.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
@@ -31,14 +28,14 @@ PRODUCT_GMS_CLIENTID_BASE := android-samsung-ss
 
 # Build fingerprint
 PRODUCT_BUILD_PROP_OVERRIDES += \
-	BuildDesc="m21nsxx-user 12 SP1A.210812.016 M215FXXU3CWB1 release-keys" \
-	BuildFingerprint="samsung/m21nsxx/m21:12/SP1A.210812.016/M215FXXU3CWB1:user/release-keys"
+	BuildDesc="m30snsxx-user 11 RP1A.200720.012 M307FXXU4CVD1 release-keys" \
+	BuildFingerprint="samsung/m30snsxx/m30s:11/RP1A.200720.012/M307FXXU4CVD1:user/release-keys"
 
 ## Device configuration
 PRODUCT_NAME := lineage_m30s
 PRODUCT_DEVICE := m30s
 PRODUCT_BRAND := samsung
-PRODUCT_MODEL := SM-M215F
+PRODUCT_MODEL := SM-M307F
 PRODUCT_MANUFACTURER := samsung
 
 TARGET_BOOT_ANIMATION_RES := 1080

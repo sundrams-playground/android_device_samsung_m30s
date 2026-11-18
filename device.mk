@@ -18,13 +18,13 @@ DEVICE_PATH := device/samsung/m30s
 
 # Inherit common device configuration
 $(call inherit-product, device/samsung/universal9611-common/common.mk)
-# Inherit A51 blobs
+# Inherit m30s blobs
 $(call inherit-product, vendor/samsung/m30s/m30s-vendor.mk)
 
 DEVICE_PACKAGE_OVERLAYS += $(DEVICE_PATH)/overlay
 
 # Screen H/W
-TARGET_SCREEN_HEIGHT := 2400
+TARGET_SCREEN_HEIGHT := 2340
 TARGET_SCREEN_WIDTH := 1080
 
 # V32
@@ -53,6 +53,3 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
      $(DEVICE_PATH)/configs/keylayout/uinput-sec-fp.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/uinput-sec-fp.kl
 
-PRODUCT_COPY_FILES += \
-    $(DEVICE_PATH)/configs/nfc/libnfc-sec-vendor.conf:$(TARGET_COPY_OUT_VENDOR)/etc/libnfc-sec-vendor.conf \
-    $(DEVICE_PATH)/configs/nfc/libnfc-nci.conf:$(TARGET_COPY_OUT_VENDOR)/etc/libnfc-nci.conf
