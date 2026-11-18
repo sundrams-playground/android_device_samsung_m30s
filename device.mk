@@ -21,6 +21,12 @@ $(call inherit-product, device/samsung/universal9611-common/common.mk)
 # Inherit m30s blobs
 $(call inherit-product, vendor/samsung/m30s/m30s-vendor.mk)
 
+# Task profiles (Pie launched: libprocessgroup loads the API 28 profiles,
+# which need the schedtune controller our kernel does not have)
+PRODUCT_COPY_FILES += \
+    system/core/libprocessgroup/profiles/cgroups.json:$(TARGET_COPY_OUT_SYSTEM)/etc/task_profiles/cgroups_28.json \
+    system/core/libprocessgroup/profiles/task_profiles.json:$(TARGET_COPY_OUT_SYSTEM)/etc/task_profiles/task_profiles_28.json
+
 DEVICE_PACKAGE_OVERLAYS += $(DEVICE_PATH)/overlay
 
 # Screen H/W
