@@ -37,7 +37,7 @@ BOARD_SUPER_PARTITION_SIZE := 5033164800
 BOARD_SAMSUNG_DYNAMIC_PARTITIONS_SIZE := 5028970496
 
 ## Camera
-$(call soong_config_set,samsungCameraVars,extra_ids,20,23,50,52)
+$(call soong_config_set,samsungCameraVars,extra_ids,20$(comma)23$(comma)50$(comma)52)
 
 ## Prop
 TARGET_VENDOR_PROP += $(DEVICE_PATH)/vendor.prop
