@@ -15,6 +15,10 @@
 #
 
 # Inherit device configuration
+# NFC (SM-M307FN only, selected at boot from the bootloader version)
+TARGET_USES_SLSI_NFC := true
+TARGET_USES_SLSI_NFC_SKU := true
+
 $(call inherit-product, device/samsung/m30s/device.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 ## Inherit some common Lineage stuff

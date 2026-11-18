@@ -16,10 +16,12 @@
 
 DEVICE_PATH := device/samsung/m30s
 
+# Inherit the device specific blobs first, so they take precedence
+# over the common ones (e.g. NFC RF registers)
+$(call inherit-product, vendor/samsung/m30s/m30s-vendor.mk)
+
 # Inherit common device configuration
 $(call inherit-product, device/samsung/universal9611-common/common.mk)
-# Inherit m30s blobs
-$(call inherit-product, vendor/samsung/m30s/m30s-vendor.mk)
 
 # Task profiles (Pie launched: libprocessgroup loads the API 28 profiles,
 # which need the schedtune controller our kernel does not have)

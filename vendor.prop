@@ -4,3 +4,7 @@ bluetooth.device.default_name=Galaxy M30s
 ## Fingerpint
 ro.vendor.fingerprint.type=rear
 ro.vendor.fingerprint.supports_gestures=true
+
+## NFC
+# Only SM-M307FN has an NFC chip, see set_nfc_sku() in the common libinit
+ro.vendor.nfc.bootloader_prefixes=M307FN

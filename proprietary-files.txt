@@ -66,3 +66,6 @@ vendor/tee/tui/resolution_common/ID00000100
 vendor/firmware/fimc_is_lib.bin
 vendor/firmware/fimc_is_rta.bin
 vendor/firmware/mfc_fw.bin
+
+## NFC - from M307FNXXS4CWC1 (antenna RF registers, only used on SM-M307FN)
+vendor/etc/nfc/sec_s3nrn82_rfreg.bin|65bc29df324205df52c338f8dcab203ab9d62966
