@@ -1,4 +1,4 @@
-# Proprietary files - from Samsung package version M307FXXU4CVD1, unless pinned
+# Proprietary files - from Samsung package version M307FXXS4CWC2, unless pinned
 
 ## Audio Firmware - from M215FXXS3CWK2 (m21 audio stack, confirmed working on m30s)
 vendor/firmware/APBargeIn_AUDIO_SLSI.bin|9cea45c6c359bf4c9d970712f233dc124ee0055b

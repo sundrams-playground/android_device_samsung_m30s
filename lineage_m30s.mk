@@ -28,8 +28,8 @@ PRODUCT_GMS_CLIENTID_BASE := android-samsung-ss
 
 # Build fingerprint
 PRODUCT_BUILD_PROP_OVERRIDES += \
-	BuildDesc="m30snsxx-user 11 RP1A.200720.012 M307FXXU4CVD1 release-keys" \
-	BuildFingerprint="samsung/m30snsxx/m30s:11/RP1A.200720.012/M307FXXU4CVD1:user/release-keys"
+	BuildDesc="m30sdd-user 11 RP1A.200720.012 M307FXXS4CWC2 release-keys" \
+	BuildFingerprint="samsung/m30sdd/m30s:11/RP1A.200720.012/M307FXXS4CWC2:user/release-keys"
 
 ## Device configuration
 PRODUCT_NAME := lineage_m30s

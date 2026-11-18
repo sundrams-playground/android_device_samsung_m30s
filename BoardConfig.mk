@@ -22,7 +22,7 @@ include device/samsung/universal9611-common/BoardConfigPieLaunched.mk
 -include vendor/samsung/m30s/BoardConfigVendor.mk
 
 # OTA Asserts
-TARGET_OTA_ASSERT_DEVICE := m30s,m30snsxx
+TARGET_OTA_ASSERT_DEVICE := m30s,m30sdd
 
 ## Partitions Sizes
 BOARD_BOOTIMAGE_PARTITION_SIZE := 57671680
