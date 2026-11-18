@@ -1,0 +1,10 @@
+# DEBUG ONLY (eng builds)
+service m30s-bootlog /vendor/bin/m30s-bootlog.sh
+    user root
+    group root log system
+    seclabel u:r:su:s0
+    oneshot
+    disabled
+
+on early-init
+    start m30s-bootlog

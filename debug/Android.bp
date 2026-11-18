@@ -1,0 +1,13 @@
+// DEBUG ONLY (eng builds): boot log snapshotter
+sh_binary {
+    name: "m30s-bootlog.sh",
+    src: "m30s-bootlog.sh",
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "m30s-bootlog.rc",
+    src: "m30s-bootlog.rc",
+    sub_dir: "init",
+    vendor: true,
+}

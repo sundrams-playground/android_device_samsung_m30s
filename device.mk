@@ -57,3 +57,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
      $(DEVICE_PATH)/configs/keylayout/uinput-sec-fp.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/uinput-sec-fp.kl
 
+
+# DEBUG ONLY: boot log snapshotter for eng builds
+ifeq ($(TARGET_BUILD_VARIANT),eng)
+PRODUCT_PACKAGES += \
+    m30s-bootlog.sh \
+    m30s-bootlog.rc
+endif
