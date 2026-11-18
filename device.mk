@@ -30,6 +30,10 @@ TARGET_SCREEN_WIDTH := 1080
 # V32
 PRODUCT_PACKAGES += libutils-v32
 
+# Shims
+PRODUCT_PACKAGES += \
+    libshim_ubsan
+
 # Dynamic Partitions
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
 PRODUCT_RETROFIT_DYNAMIC_PARTITIONS := false

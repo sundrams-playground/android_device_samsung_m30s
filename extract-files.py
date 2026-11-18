@@ -38,6 +38,8 @@ blob_fixups: blob_fixups_user_type = {
         'vendor/lib64/libsensorlistener.so',
     ): blob_fixup()
         .add_needed('libshim_sensorndkbridge.so'),
+    'vendor/lib64/libSEF.quram.so': blob_fixup()
+        .replace_needed('libclang_rt.ubsan_standalone-aarch64-android.so', 'libshim_ubsan.so'),
 } # fmt: skip
 
 module = ExtractUtilsModule(
