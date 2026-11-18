@@ -16,8 +16,8 @@
 
 DEVICE_PATH := device/samsung/m30s
 
-# Inherit from the common tree
-include device/samsung/universal9611-common/BoardConfigCommon.mk
+# Inherit from the common tree (Pie launched, retrofitted dynamic partitions)
+include device/samsung/universal9611-common/BoardConfigPieLaunched.mk
 # Inherit optional vendor BoardConfig
 -include vendor/samsung/m30s/BoardConfigVendor.mk
 
@@ -25,10 +25,16 @@ include device/samsung/universal9611-common/BoardConfigCommon.mk
 TARGET_OTA_ASSERT_DEVICE := m21,m21dd,m21nsxx
 
 ## Partitions Sizes
-BOARD_BOOTIMAGE_PARTITION_SIZE := 61865984
+BOARD_BOOTIMAGE_PARTITION_SIZE := 57671680
 BOARD_DTBOIMG_PARTITION_SIZE := 8388608
-BOARD_RECOVERYIMAGE_PARTITION_SIZE := 71106560
-BOARD_CACHEIMAGE_PARTITION_SIZE := 209715200
+BOARD_RECOVERYIMAGE_PARTITION_SIZE := 67633152
+BOARD_CACHEIMAGE_PARTITION_SIZE := 314572800
+
+## Dynamic Partitions
+# Retrofitted on the stock system block device (5033164800 bytes),
+# minus 4 MiB for the dynamic partitions metadata.
+BOARD_SUPER_PARTITION_SIZE := 5033164800
+BOARD_SAMSUNG_DYNAMIC_PARTITIONS_SIZE := 5028970496
 
 ## Camera
 $(call soong_config_set,samsungCameraVars,extra_ids,4,20,23,50,52)

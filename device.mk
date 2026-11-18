@@ -32,6 +32,11 @@ PRODUCT_PACKAGES += libutils-v32
 
 # Dynamic Partitions
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
+PRODUCT_RETROFIT_DYNAMIC_PARTITIONS := false
+
+# Fastbootd
+PRODUCT_PACKAGES += \
+    fastbootd
 
 # Audio configs
 PRODUCT_COPY_FILES += \
