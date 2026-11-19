@@ -1,0 +1,4 @@
+# Project Infinity X device info
+ro.product.marketname=Galaxy M30s
+ro.infinity.soc=Exynos 9611
+ro.infinity.camera=48MP + 8MP + 5MP

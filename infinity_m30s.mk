@@ -21,8 +21,13 @@ TARGET_USES_SLSI_NFC_SKU := true
 
 $(call inherit-product, device/samsung/m30s/device.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
-## Inherit some common Lineage stuff
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+# Project Infinity X
+INFINITY_MAINTAINER := xyz-sundram
+# No Quick Tap (Columbus) sensor
+TARGET_SUPPORTS_QUICK_TAP := false
+
+## Inherit some common Project Infinity X stuff
+$(call inherit-product, vendor/infinity/config/common_full_phone.mk)
 
 # Shipping API level
 PRODUCT_SHIPPING_API_LEVEL := 28
@@ -36,7 +41,7 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
 	BuildFingerprint="samsung/m30sdd/m30s:11/RP1A.200720.012/M307FXXS4CWC2:user/release-keys"
 
 ## Device configuration
-PRODUCT_NAME := lineage_m30s
+PRODUCT_NAME := infinity_m30s
 PRODUCT_DEVICE := m30s
 PRODUCT_BRAND := samsung
 PRODUCT_MODEL := SM-M307F
