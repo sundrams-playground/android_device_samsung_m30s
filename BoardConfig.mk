@@ -38,6 +38,10 @@ BOARD_SAMSUNG_DYNAMIC_PARTITIONS_SIZE := 5028970496
 
 ## Camera
 $(call soong_config_set,samsungCameraVars,extra_ids,20$(comma)23$(comma)50$(comma)52)
+# The camera HAL is an Android 11 blob: it fills exif_attribute_t with the
+# Android 11 layout (32-byte model, offset_time). libhwjpeg otherwise
+# defaults to the Android 13 layout and rejects every capture.
+$(call soong_config_set,libhwjpeg,HWJPEG_ANDROID_VERSION,11)
 
 ## Prop
 TARGET_VENDOR_PROP += $(DEVICE_PATH)/vendor.prop
